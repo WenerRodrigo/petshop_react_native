@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 
 export default StyleSheet.create({
-    preenher: {
+    preencher: {
         flex: 1,
     }
 })
