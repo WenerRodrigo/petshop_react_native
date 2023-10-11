@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, SafeAreaView, StatusBar, FlatList } from 'react-native';
+import { SafeAreaView, StatusBar, FlatList } from 'react-native';
 import Item from './Item';
 
 
@@ -28,7 +28,6 @@ export default function Servicos() {
     return (
         <SafeAreaView>
             <StatusBar />
-            <Text>Tela de Serviços</Text>
             <FlatList 
                 data={servicos}
                 renderItem={({item}) => <Item{...item}/>}
