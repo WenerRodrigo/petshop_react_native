@@ -1,9 +1,13 @@
-import React from 'react';
-import { Button, Text, TextInput, View } from 'react-native';
+import React, { useState } from 'react';
+import { Button, Text, View } from 'react-native';
 import estilos from './estilos';
+import CampoInteiro from '../../../componentes/CampoInteiro';
+import Botao from '../../../componentes/Botao';
 
 
 export default function Item({ nome, preco, descricao }) {
+    const [quantidade, setQuantidade] = useState(1);
+
     return (
         <>
             <View style={estilos.informacao}>
@@ -15,14 +19,14 @@ export default function Item({ nome, preco, descricao }) {
                 <View>
                     <View style={estilos.valor}>
                         <Text style={estilos.descricao}>Quantidade:</Text>
-                        <TextInput value='0'/>
+                        <CampoInteiro estilos={estilos.quantidade} valor={quantidade} acao={setQuantidade}/>
                     </View>
                     <View style={estilos.valor}>
                         <Text style={estilos.descricao}>Preço:</Text>
                         <Text style={estilos.preco}>0</Text>
                     </View>
                 </View>
-                <Button title="Adicionar ao Carrinho" onPress={() => {}}/>
+                <Botao valor="Adicionar" acao={() => {}}/>
             </View>
             <View style={estilos.divisor}/>
         </>
